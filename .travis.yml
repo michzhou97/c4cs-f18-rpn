@@ -1,7 +1,9 @@
 language: python
 python:
-    - "3.5"
+ - "3.5"
+before_install:
+ - gem install bundle
 install:
-    - pip install -r requirements.txt
+ - pip install -r requirements.txt
 script:
-    - test_rpn
+ - python test_rpn.py
