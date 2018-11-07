@@ -35,6 +35,10 @@ class TestBasics(unittest.TestCase):
         calculation = rpn.calculate("4 !", hist)
         result = rpn.calculate("history", hist)
         self.assertEqual("4 ! = 24", result)
+    def test_dividezero(self):
+        hist = list()
+        result = rpn.calculate("2 0 /", hist)
+        self.assertEqual("Divide by zero error", result)
 
 if __name__ == "__main__":
    unittest.main()
