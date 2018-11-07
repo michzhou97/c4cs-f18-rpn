@@ -3,17 +3,10 @@ language: python
 python:
 
  - "3.5"
-
-install:
-
- - pip install python-coveralls
- - pip install coverage
- - pip install nose
  
 script:
 
  - python test_rpn.py
- - nosetests --with-coverage
 
 after_success:
 
