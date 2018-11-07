@@ -21,6 +21,10 @@ class TestBasics(unittest.TestCase):
     def test_factorial(self):
         result = rpn.calculate("4 !")
         self.assertEqual(24, result)
+    def test_history(self):
+        calculation = rpn.calculate("2 3 +")
+        result = rpn.calculate("history")
+        self.assertEqual("2 + 3 = 5")
 
 if __name__ == "__main__":
    unittest.main()
