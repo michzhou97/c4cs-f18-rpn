@@ -25,6 +25,9 @@ class TestBasics(unittest.TestCase):
         calculation = rpn.calculate("2 3 +")
         result = rpn.calculate("history")
         self.assertEqual("2 + 3 = 5")
+        calculation = rpn.calculate("4 !")
+        result = rpn.calculate("history")
+        self.assertEqual("4 ! = 24")
 
 if __name__ == "__main__":
    unittest.main()
