@@ -37,6 +37,8 @@ def calculate(myarg, hist):
                 if token != '!':
                     arg2 = stack.pop()
                     arg1 = stack.pop()
+                    if token == '/' and arg2 == 0:
+                        return "Divide by zero error"
                     hist.append(arg1)
                     hist.append(arg2)
                     hist.append(token)
@@ -57,7 +59,7 @@ def calculate(myarg, hist):
 
 def main():
     hist = list()
-    
+
     while True:
         result = calculate(input("rpn calc> "), hist)
         print("Result: ", result)
